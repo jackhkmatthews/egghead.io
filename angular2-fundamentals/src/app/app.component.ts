@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-title	= 'let\'s get going';
+    title	= 'let\'s get going';
+
+    constructor(
+        @Inject('mail') private mail,
+        @Inject('api') private api,
+    ){
+
+    }
 }
