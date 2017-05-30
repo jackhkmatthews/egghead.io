@@ -6,11 +6,9 @@ import { Component, Inject } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title	= 'let\'s get going';
 
     constructor(
         @Inject('mail') private mail,
-        @Inject('api') private api,
     ){
 
     }
