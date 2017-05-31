@@ -4,7 +4,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'app-simple-form',
   template: `
             <div>
-                {{message}}
                 <input #myInput type="text" [(ngModel)]="message">
                 <button (click)="update.emit({text:message})">Click me!</button>
             </div>
@@ -13,7 +12,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SimpleFormComponent implements OnInit {
 
-  @Input() message;  
+  @Input() message;
 
   @Output() update = new EventEmitter();
 
@@ -22,7 +21,4 @@ export class SimpleFormComponent implements OnInit {
   ngOnInit() {
   }
 
-    onClick(value){
-        console.log(value); 
-    }      
 }
