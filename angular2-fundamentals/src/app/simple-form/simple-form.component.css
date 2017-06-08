@@ -1,0 +1,12 @@
+button {
+  background-color: black;
+  color: white;
+}
+
+:host {
+  background-color: pink;
+}
+
+.mousedown {
+ background-color: red;
+}
