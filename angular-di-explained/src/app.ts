@@ -4,7 +4,10 @@ import { Car } from './car.class';
 
 
 function main() {
-  let car = new Car();
+  let engine = new Engine();
+  let doors = new Doors();
+
+  let car = new Car(engine, doors);
 
   car.startEngine();
 }

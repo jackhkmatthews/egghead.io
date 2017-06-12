@@ -73,12 +73,10 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var engine_class_1 = __webpack_require__(3);
-var doors_class_1 = __webpack_require__(2);
 var Car = (function () {
-    function Car() {
-        this.engine = new engine_class_1.Engine();
-        this.doors = new doors_class_1.Doors();
+    function Car(engine, doors) {
+        this.engine = engine;
+        this.doors = doors;
     }
     Car.prototype.startEngine = function () {
         this.engine.start();
@@ -95,9 +93,13 @@ exports.Car = Car;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var engine_class_1 = __webpack_require__(3);
+var doors_class_1 = __webpack_require__(2);
 var car_class_1 = __webpack_require__(0);
 function main() {
-    var car = new car_class_1.Car();
+    var engine = new engine_class_1.Engine();
+    var doors = new doors_class_1.Doors();
+    var car = new car_class_1.Car(engine, doors);
     car.startEngine();
 }
 main();
